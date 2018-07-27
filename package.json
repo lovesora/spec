@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "commit": "sh bin/commit.sh",
-    "prepub:dev": "npm run commit",
+    "prepub:dev": "npm run commit && npm version prerelease",
     "pub:dev": "npm publish --tag dev --access public",
-    "postpub:dev": "npm version prerelease && git push && git push --tags",
-    "prepub": "npm run commit",
+    "postpub:dev": "git push && git push --tags",
+    "prepub": "npm run commit && npm version patch",
     "pub": "npm publish --access public",
-    "postpub": "npm version patch && git push && git push --tags"
+    "postpub": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
