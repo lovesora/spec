@@ -1,0 +1,28 @@
+{
+  "name": "@sorarem/spec",
+  "version": "1.0.0",
+  "description": "fe angular specification",
+  "main": "index.js",
+  "scripts": {
+    "commit": "sh bin/commit.sh",
+    "prepub:dev": "npm run commit",
+    "pub:dev": "npm publish --tag dev",
+    "postpub:dev": "npm version prerelease && git push && git push --tags",
+    "prepub": "npm run commit",
+    "pub": "npm publish",
+    "postpub": "npm version patch && git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lovesora/spec.git"
+  },
+  "keywords": [
+    "spec"
+  ],
+  "author": "liuxin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lovesora/spec/issues"
+  },
+  "homepage": "https://github.com/lovesora/spec#readme"
+}
