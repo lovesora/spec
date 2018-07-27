@@ -6,10 +6,10 @@
   "scripts": {
     "commit": "sh bin/commit.sh",
     "prepub:dev": "npm run commit",
-    "pub:dev": "npm publish --tag dev",
+    "pub:dev": "npm publish --tag dev --access public",
     "postpub:dev": "npm version prerelease && git push && git push --tags",
     "prepub": "npm run commit",
-    "pub": "npm publish",
+    "pub": "npm publish --access public",
     "postpub": "npm version patch && git push && git push --tags"
   },
   "repository": {
